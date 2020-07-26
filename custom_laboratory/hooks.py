@@ -10,6 +10,8 @@ app_icon = "octicon octicon-file-directory"
 app_color = "red"
 app_email = "panhavadd@gmail.com"
 app_license = "MIT"
+fixture = ["Custom Field", "Custom Script", "Lab Test", "Lab Test Template", "Patient", "Normal Test Items"]
+
 
 # Includes in <head>
 # ------------------
@@ -34,6 +36,10 @@ app_license = "MIT"
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
+
+doctype_list_js = {
+	"Vaccination":"custom_laboratory/doctype/vaccination/vaccination_list.js",
+}
 
 # Home Pages
 # ----------
@@ -84,11 +90,14 @@ app_license = "MIT"
 # Hook on document methods and events
 
 # doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-#	}
+	# "*": {
+	# 	"on_update": "method",
+	# 	"on_cancel": "method",
+	# 	"on_trash": "method"
+	# },
+    # "Vaccination Dosage Items": {
+	# 	"validate": "custom_laboratory.custom_laboratory.laboratory_custom_func.compile_vac_dosage_name"
+	# }
 # }
 
 # Scheduled Tasks

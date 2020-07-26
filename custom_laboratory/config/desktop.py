@@ -6,6 +6,7 @@ def get_data():
 	return [
 		{
 			"module_name": "Custom Laboratory",
+			"category": "Modules",
 			"color": "red",
 			"icon": "octicon octicon-file-directory",
 			"type": "module",

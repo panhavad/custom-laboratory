@@ -1,0 +1,31 @@
+{
+ "custom_fields": [],
+ "custom_perms": [],
+ "doctype": "Vaccination",
+ "property_setters": [
+  {
+   "_assign": null,
+   "_comments": null,
+   "_liked_by": null,
+   "_user_tags": null,
+   "creation": "2020-07-24 16:09:36.695559",
+   "default_value": null,
+   "doc_type": "Vaccination",
+   "docstatus": 0,
+   "doctype_or_field": "DocField",
+   "field_name": "naming_series",
+   "idx": 0,
+   "modified": "2020-07-24 16:09:36.695559",
+   "modified_by": "Administrator",
+   "name": "Vaccination-naming_series-options",
+   "owner": "Administrator",
+   "parent": null,
+   "parentfield": null,
+   "parenttype": null,
+   "property": "options",
+   "property_type": "Text",
+   "value": "VC-"
+  }
+ ],
+ "sync_on_migrate": 1
+}

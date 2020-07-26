@@ -1,0 +1,146 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:vaccine_code",
+ "beta": 1,
+ "creation": "2020-07-23 14:30:02.648156",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "vaccine_name",
+  "item",
+  "vaccine_code",
+  "vaccine_group",
+  "column_break_3",
+  "vaccination_dosage_items",
+  "disabled",
+  "is_billable",
+  "vaccine_price_rate",
+  "sb_comments",
+  "vaccine_description"
+ ],
+ "fields": [
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "no_copy": 1,
+   "options": "Item",
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  },
+  {
+   "default": "1",
+   "depends_on": "eval:doc.lab_test_template_type != 'Grouped'",
+   "description": "If unchecked, the item wont be appear in Sales Invoice, but can be used in group test creation. ",
+   "fieldname": "is_billable",
+   "fieldtype": "Check",
+   "label": "Is Billable",
+   "search_index": 1
+  },
+  {
+   "fieldname": "sb_comments",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "vaccine_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Vaccination Name",
+   "no_copy": 1,
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "vaccine_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "no_copy": 1,
+   "read_only": 1,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "Vaccination",
+   "fieldname": "vaccine_group",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_standard_filter": 1,
+   "label": "Item Group",
+   "options": "Item Group",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "vaccine_description",
+   "fieldtype": "Text",
+   "label": "Desription"
+  },
+  {
+   "fieldname": "vaccination_dosage_items",
+   "fieldtype": "Link",
+   "label": "Dosage Schedule",
+   "options": "Vaccination Dosage Items"
+  },
+  {
+   "depends_on": "eval:doc.is_billable == 1",
+   "description": "This value is updated in the Default Sales Price List.",
+   "fieldname": "vaccine_price_rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Rate",
+   "mandatory_depends_on": "eval:doc.is_billable == 1",
+   "search_index": 1
+  }
+ ],
+ "links": [],
+ "modified": "2020-07-26 15:18:52.680464",
+ "modified_by": "Administrator",
+ "module": "Custom Laboratory",
+ "name": "Vaccination Template",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory User",
+   "share": 1
+  }
+ ],
+ "restrict_to_domain": "Healthcare",
+ "search_fields": "vaccine_code,vaccine_name",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "vaccine_name",
+ "track_changes": 1
+}

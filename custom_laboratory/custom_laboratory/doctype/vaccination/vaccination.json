@@ -1,0 +1,296 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "creation": "2020-07-23 14:30:29.059834",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "patient",
+  "patient_name",
+  "patient_age",
+  "patient_sex",
+  "report_preference",
+  "email",
+  "mobile",
+  "c_b",
+  "inpatient_record",
+  "company",
+  "status",
+  "submitted_date",
+  "approved_date",
+  "invoiced",
+  "sb_first",
+  "vaccination_template",
+  "vaccination_name",
+  "column_break_26",
+  "dosage_date",
+  "dosage_number",
+  "sb_comments",
+  "vaccination_comment",
+  "email_sent",
+  "sms_sent",
+  "printed",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "VC-",
+   "print_hide": 1,
+   "report_hide": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "inpatient_record.patient",
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1,
+   "search_index": 1,
+   "set_only_once": 1
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "patient_age",
+   "fieldtype": "Data",
+   "label": "Age",
+   "read_only": 1
+  },
+  {
+   "fieldname": "patient_sex",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender",
+   "print_hide": 1,
+   "report_hide": 1,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "report_preference",
+   "fieldtype": "Data",
+   "label": "Report Preference",
+   "print_hide": 1,
+   "read_only": 1,
+   "report_hide": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Email",
+   "print_hide": 1,
+   "read_only": 1,
+   "report_hide": 1
+  },
+  {
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "label": "Mobile",
+   "print_hide": 1,
+   "read_only": 1,
+   "report_hide": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "c_b",
+   "fieldtype": "Column Break",
+   "print_hide": 1
+  },
+  {
+   "fetch_from": "patient.inpatient_record",
+   "fieldname": "inpatient_record",
+   "fieldtype": "Link",
+   "label": "Inpatient Record",
+   "options": "Inpatient Record",
+   "read_only": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Company",
+   "options": "Company",
+   "print_hide": 1,
+   "report_hide": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Status",
+   "options": "Draft\nCompleted\nApproved\nRejected\nCancelled",
+   "print_hide": 1,
+   "report_hide": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "submitted_date",
+   "fieldtype": "Datetime",
+   "hidden": 1,
+   "label": "Submitted Date",
+   "print_hide": 1,
+   "report_hide": 1
+  },
+  {
+   "fieldname": "approved_date",
+   "fieldtype": "Datetime",
+   "hidden": 1,
+   "label": "Approved Date",
+   "print_hide": 1,
+   "report_hide": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "invoiced",
+   "fieldtype": "Check",
+   "label": "Invoiced",
+   "no_copy": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "sb_first",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sb_comments",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "email_sent",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "print_hide": 1,
+   "report_hide": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "sms_sent",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "print_hide": 1,
+   "report_hide": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "printed",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "print_hide": 1,
+   "report_hide": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Vaccination",
+   "print_hide": 1,
+   "read_only": 1,
+   "report_hide": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Vaccination",
+   "print_hide": 1,
+   "read_only": 1,
+   "report_hide": 1
+  },
+  {
+   "fieldname": "vaccination_template",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Vaccination Template",
+   "options": "Vaccination Template",
+   "print_hide": 1,
+   "report_hide": 1
+  },
+  {
+   "fieldname": "vaccination_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Vaccination Name",
+   "no_copy": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "dosage_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Dosage Date",
+   "search_index": 1
+  },
+  {
+   "fieldname": "dosage_number",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Dosage Number",
+   "length": 2,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "vaccination_comment",
+   "fieldtype": "Text",
+   "ignore_xss_filter": 1,
+   "label": "Comments"
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2020-07-27 00:33:15.581565",
+ "modified_by": "Administrator",
+ "module": "Custom Laboratory",
+ "name": "Vaccination",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "restrict_to_domain": "Healthcare",
+ "search_fields": "patient,vaccination_name",
+ "show_name_in_global_search": 1,
+ "sort_field": "dosage_date",
+ "sort_order": "ASC",
+ "title_field": "patient",
+ "track_changes": 1,
+ "track_seen": 1
+}

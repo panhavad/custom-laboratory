@@ -1,0 +1,31 @@
+{
+ "custom_fields": [],
+ "custom_perms": [],
+ "doctype": "Vaccination Dosage Items",
+ "property_setters": [
+  {
+   "_assign": null,
+   "_comments": null,
+   "_liked_by": null,
+   "_user_tags": null,
+   "creation": "2020-07-23 23:06:25.181825",
+   "default_value": null,
+   "doc_type": "Vaccination Dosage Items",
+   "docstatus": 0,
+   "doctype_or_field": "DocType",
+   "field_name": null,
+   "idx": 0,
+   "modified": "2020-07-23 23:06:25.181825",
+   "modified_by": "Administrator",
+   "name": "Vaccination Dosage Items-sort_field",
+   "owner": "Administrator",
+   "parent": null,
+   "parentfield": null,
+   "parenttype": null,
+   "property": "sort_field",
+   "property_type": "Data",
+   "value": "vaccination_dosage_name"
+  }
+ ],
+ "sync_on_migrate": 1
+}
